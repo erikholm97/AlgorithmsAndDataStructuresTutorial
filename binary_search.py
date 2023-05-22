@@ -1,6 +1,6 @@
 def binary_search(list, target): 
-    first = 0
-    last = len(list) - 1
+    first = 0 #Define the first number.
+    last = len(list) - 1 #Define the last number.
 
     while first <= last:
         midpoint = (first + last)//2 #Rounds down to nearest whole number. For example 7 / 3 = 3 (Instead of 3.5)
@@ -8,9 +8,9 @@ def binary_search(list, target):
         if list[midpoint] == target:
             return midpoint
         elif list[midpoint] < target:
-            first = midpoint + 1
+            first = midpoint + 1 #First number will be set to mid point + 1.
         else:
-            last = midpoint - 1
+            last = midpoint - 1 #Last number will be set to mid point - 1.
 
     return None
 
