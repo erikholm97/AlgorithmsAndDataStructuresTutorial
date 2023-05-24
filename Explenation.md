@@ -13,3 +13,6 @@
 ## 3. The algorithm should produce a result.
 
 ## The algorithm should complete in a finit amount of time.
+
+# Arrays
+### Arrays is a contiguous data structure that are right beside eachother. 
