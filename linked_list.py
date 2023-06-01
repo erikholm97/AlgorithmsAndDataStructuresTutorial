@@ -46,17 +46,15 @@ class LinkedList:
     
     def is_empty(self):
         return self.head == None
+    
+    def add(self, data):
+        new_node = Node(data)
+        new_node.next_node = self.head
         
-    def size(self):        
-        count += 1
-        current = current.next_node
 
         
 l = LinkedList()
 
 N1 = Node(10)
 l.head = N1
-
-l.head = N1
-
-l.size()
+print(l.size())
