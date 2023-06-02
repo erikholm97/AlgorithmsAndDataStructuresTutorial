@@ -48,13 +48,26 @@ class LinkedList:
         return self.head == None
     
     def add(self, data):
+        """
+        Adds new node containing data at head of the list
+        Takes 0(1) time
+        """
         new_node = Node(data)
         new_node.next_node = self.head
+        self.head = new_node
         
 
         
-l = LinkedList()
+# l = LinkedList()
 
-N1 = Node(10)
-l.head = N1
-print(l.size())
+# N1 = Node(10)
+# l.head = N1
+# print(l.size())
+
+# l = LinkedList()
+
+# l.add(1)
+# print(l.size())
+# l.add(2)
+# l.add(60)
+# print(l.size())
