@@ -69,9 +69,37 @@ class LinkedList:
         while current:
             if current.data == key:
                 return current
-        else:
-            current = current.next_node
+            else:
+                current = current.next_node        
         return None
+    
+    def insert(self, data, index):
+        """
+        Inserts a new Node containing data at index position
+        Insertion takes 0(1) time but finding the node at the insertion 
+        point takes 0(n) time.
+
+        Takes overall (0)n.
+        """
+
+        if index == 0:
+            self.add(data)
+
+        if index > 0:
+            new = Node(data)
+
+            position = index 
+            current = self.head
+
+            while position > 1:
+                current = current.next_node
+                position -= 1
+
+            prev = current
+            next = current.next_node
+
+            prev.next_node = new
+            new.next_node = next
 
     def __repr__(self):
         """
@@ -106,3 +134,14 @@ class LinkedList:
 # l.add(2)
 # l.add(60)
 # print(l.size())
+
+l =  LinkedList()
+l.add(10)
+l.add(2)
+l.add(45)
+l.add(15)
+
+n = l.search(45)
+
+print(n)
+print(l)
