@@ -16,3 +16,33 @@ def merge_sort(list):
     right = merge_sort(right_half)
 
     return merge_sort(left, right)
+
+def split(list):
+    """
+    Divide the unsorted list at midpoint into sublists.
+    Returns two sublists - left and right
+    """
+
+    mid = len(list)//2
+    left = list[:mid]
+    right = list[mid:]
+
+    return left,right
+
+def merge_sort(left, right):
+    """
+    Merges two lists (arrays), sorting them in the process
+    Returns a new merged list
+    """
+
+    l = []
+    i = 0
+    j = 0
+
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            l.append(left[i])
+            i += 1
+        else:
+            l.append(right[j])
+            j+=1
