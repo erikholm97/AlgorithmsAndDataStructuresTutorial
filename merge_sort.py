@@ -46,3 +46,13 @@ def merge_sort(left, right):
         else:
             l.append(right[j])
             j+=1
+
+    #Account for if right list is shorter than right.
+    while i < len(left):
+        l.append(left[i])
+        i+=1
+
+    #Account for if right list is shorter than right.
+    while j < len(right):
+        l.append(right[j])
+        j+=1
