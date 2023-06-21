@@ -14,10 +14,6 @@ class Node:
         return "<Node data: %s>" % self.data
     
 
-n1 = Node(10)
-
-print(n1)
-
 class LinkedList:
     """
     Singly linked list
@@ -146,29 +142,3 @@ class LinkedList:
             current = current.next_node
         return  '-> '.join(nodes)
         
-
-        
-# l = LinkedList()
-
-# N1 = Node(10)
-# l.head = N1
-# print(l.size())
-
-# l = LinkedList()
-
-# l.add(1)
-# print(l.size())
-# l.add(2)
-# l.add(60)
-# print(l.size())
-
-l =  LinkedList()
-l.add(10)
-l.add(2)
-l.add(45)
-l.add(15)
-
-n = l.search(45)
-
-print(n)
-print(l)
