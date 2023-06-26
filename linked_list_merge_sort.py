@@ -1,5 +1,15 @@
 from linked_list import LinkedList
-l = LinkedList()
-l.add(1)
+from linked_list import Node
 
-print(l)
+def merge_sort(linked_list):
+    """
+    Sorts a linked list in ascending order
+    - Recursively divide the linked list into sublists contaning a single node
+    -Repetedly merge the sublists to produce sorted sublists until one remains
+
+    Returns a sorted linked list
+    """
+
+    if linked_list.size() == 1:
+        return linked_list
+    
