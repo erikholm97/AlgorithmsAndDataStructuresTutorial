@@ -13,7 +13,6 @@ class Node:
     def __repr__(self):
         return "<Node data: %s>" % self.data
     
-
 class LinkedList:
     """
     Singly linked list
